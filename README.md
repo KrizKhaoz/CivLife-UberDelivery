@@ -6,6 +6,7 @@ Eh Whats up guys, So Today I am releasing my Uber Delivery script which pretty m
 
 # Script Links:
 [FiveC Communiy Forums](https://fivec.me/t/release-esx-civlife-uber-delivery-v1-3/229)
+[FiveM Forums](https://forum.fivem.net/t/release-civlife-uber-delivery-v1-3/831226)
 ## Features
 * Checks if Customer is home
 * If Ped is home they get more money (Configurable)
