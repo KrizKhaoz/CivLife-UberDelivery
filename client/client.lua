@@ -143,7 +143,7 @@ Citizen.CreateThread(function()
 		Citizen.Wait(cooldown) -- [Debug]
 	--	print('Delivery Sent')  -- [Debug]
 		TriggerEvent('InteractSound_CL:PlayOnOne', 'pager', 0.4)
-		TriggerEvent('notification', 'New Delivery GPS Updated')
+		exports['mythic_notify']:SendAlert('success', 'New Delivery GPS Updated')
 		hasdelivery = true
 		deliv = math.random(1,14) -- All Deliveries
 	--	print(starteduber)
@@ -306,8 +306,8 @@ function rewarduber()
 		chanceofcivstick = math.random(1,6)
 		price = math.random(90,130)
 		TriggerServerEvent('esx_uberkdshfksksdhfskdjjob:pay', price)
-		TriggerEvent('notification', 'Package Delivered')
-		TriggerEvent('notification', 'Recieved Tip')
+		exports['mythic_notify']:SendAlert('success', 'Package Delivered')
+		exports['mythic_notify']:SendAlert('success', 'Recieved Tip')
 		removeblips()
 		hasdelivery = false
 		disablepressE = false
@@ -317,7 +317,7 @@ function rewarduber()
 		elseif ispedhomechance ~= 1 then
 		price = math.random(75,88)
 		TriggerServerEvent('esx_uberkdshfksksdhfskdjjob:pay', price)
-		TriggerEvent('notification', 'Package Delivered')
+		exports['mythic_notify']:SendAlert('success', 'Package Delivered')
 		removeblips()
 		hasdelivery = false
 		disablepressE = false
@@ -1619,12 +1619,12 @@ end
 RegisterCommand('uber', function(source, args, rawCommand)
  local pedxd = GetPlayerPed( -1 )
  if not starteduber and uerdeliveryamount ~= 10 then
-	TriggerEvent('notification', 'Uber Delivery: Active [Wait for Delivery]')
+	exports['mythic_notify']:SendAlert('success', 'Uber Delivery: Active [Wait for Delivery]')
 	 starteduber = true
 	 hasdelivery = false
 	-- print(starteduber)
 	elseif starteduber then
-	TriggerEvent('notification', 'Uber Delivery: Deactivated', 2)
+	exports['mythic_notify']:SendAlert('error', 'Uber Delivery: Deactivated')
 	 starteduber = false
 	 hasdelivery = true
 	 -- print(starteduber)	
