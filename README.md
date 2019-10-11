@@ -20,6 +20,7 @@ Eh Whats up guys, So Today I am releasing my Uber Delivery script which pretty m
 ```
 * Drag and drop InteractSound into your resources (Make sure you already the InteractSound resource)
 * Add the sounds to your InteractSound __resource.lua
+* Make sure you have Mythic Notification [Click Here](https://forum.fivem.net/t/dev-resource-mythic-notifications)
 * Drag and drop civlife_uberdelivery into your resource folder
 * Add civlife_uberdelivery to your server.cfg
 ```
